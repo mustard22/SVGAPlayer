@@ -47,10 +47,6 @@ end
 Then run a `pod install` inside your terminal, or from CocoaPods.app.
 
 
-### Install Via SPM
-Search `https://github.com/mustard22/SVGAPlayer.git`
-
-
 ### Locate files
 
 SVGAPlayer could load svga file from application bundle or remote server.
