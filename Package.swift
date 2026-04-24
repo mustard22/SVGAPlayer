@@ -14,7 +14,8 @@ let package = Package(
     ],
     dependencies: [
         // 👇 对应 Podspec: Protobuf
-        .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.37.0"),
+        .package(url: "https://github.com/ZipArchive/ZipArchive.git", exact: "2.4.3")
     ],
     targets: [
         
@@ -28,7 +29,8 @@ let package = Package(
                 .define("GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS", to: "1")
             ],
             dependencies: [
-                .product(name: "SwiftProtobuf", package: "swift-protobuf")
+                .product(name: "SwiftProtobuf", package: "swift-protobuf"),
+                .product(name: "ZipArchive", package: "ZipArchive")
             ]
         ),
         
