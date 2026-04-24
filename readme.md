@@ -36,16 +36,21 @@ If wonder more information, go to this [website](http://svga.io/).
 
 Here introduce `SVGAPlayer-iOS` usage. Wonder exporting usage? Click [here](http://svga.io/designer.html).
 
-### Install Via CocoaPods
+### Install Via Swift Package Manager
 
-You want to add pod 'SVGAPlayer', '~> 2.3' similar to the following to your Podfile:
+This branch is packaged for Swift Package Manager and requires **iOS 15 or later**.
 
-target 'MyApp' do
-  pod 'SVGAPlayer', '~> 2.3'
-end
+In Xcode:
 
-Then run a `pod install` inside your terminal, or from CocoaPods.app.
+1. Open **File > Add Package Dependencies...**
+2. Add this repository as a package dependency.
+3. Link the `SVGAPlayer` library product to your app target.
 
+Then import the module where needed:
+
+```objectivec
+#import <SVGAPlayer/SVGA.h>
+```
 
 ### Locate files
 

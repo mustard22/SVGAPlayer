@@ -25,15 +25,21 @@
 
 我们在这里介绍 `SVGAPlayer-iOS` 的用法。想要知道如何导出动画，点击[这里](http://svga.io/designer.html)。
 
-### 使用 CocoaPods 安装依赖
+### 使用 Swift Package Manager 安装依赖
 
-添加依赖 'SVGAPlayer', '~> 2.3' 到 Podfile 文件中:
+当前分支使用 Swift Package Manager 集成，最低支持 **iOS 15**。
 
-target 'MyApp' do
-  pod 'SVGAPlayer', '~> 2.3'
-end
+在 Xcode 中：
 
-然后在终端执行 `pod install`。
+1. 打开 **File > Add Package Dependencies...**
+2. 添加当前仓库作为 package dependency。
+3. 将 `SVGAPlayer` library product 关联到你的 app target。
+
+然后在需要使用的地方导入模块：
+
+```objectivec
+#import <SVGAPlayer/SVGA.h>
+```
 
 ### 放置 svga 文件
 

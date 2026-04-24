@@ -17,6 +17,42 @@
 #import "Svga.pbobjc.h"
 // @@protoc_insertion_point(imports)
 
+@interface GPBFileDescriptor (SVGALegacyGeneratedCompatibility)
+- (instancetype)initWithPackage:(NSString *)package objcPrefix:(NSString *)objcPrefix syntax:(GPBFileSyntax)syntax;
+@property(nonatomic, readonly) GPBFileSyntax syntax;
+@end
+
+@interface GPBDescriptor (SVGALegacyGeneratedCompatibility)
++ (instancetype)allocDescriptorForClass:(Class)messageClass
+                             rootClass:(Class)rootClass
+                                  file:(GPBFileDescriptor *)file
+                                fields:(void *)fieldDescriptions
+                            fieldCount:(uint32_t)fieldCount
+                           storageSize:(uint32_t)storageSize
+                                 flags:(GPBDescriptorInitializationFlags)flags;
+- (void)setupContainingMessageClassName:(Class)messageClass;
+@end
+
+// Adapt old generated code to the modern runtime without rewriting the file.
+#undef GPBStringifySymbol
+#define GPBStringifySymbol(S) GPBObjCClass(S)
+#define className clazz
+
+#pragma mark - Objective-C Class declarations
+GPBObjCClassDeclaration(SVGAProtoMovieParams);
+GPBObjCClassDeclaration(SVGAProtoSpriteEntity);
+GPBObjCClassDeclaration(SVGAProtoAudioEntity);
+GPBObjCClassDeclaration(SVGAProtoLayout);
+GPBObjCClassDeclaration(SVGAProtoTransform);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity_ShapeArgs);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity_RectArgs);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity_EllipseArgs);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity_ShapeStyle);
+GPBObjCClassDeclaration(SVGAProtoShapeEntity_ShapeStyle_RGBAColor);
+GPBObjCClassDeclaration(SVGAProtoFrameEntity);
+GPBObjCClassDeclaration(SVGAProtoMovieEntity);
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 #pragma clang diagnostic ignored "-Wdirect-ivar-access"
